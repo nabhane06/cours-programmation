@@ -1,6 +1,5 @@
-// const ingredient = "olive";
 let ingredient = "olive";
-console.log(ingredient);
+const nbIngredient = -6;
+let description = "la pizza contient " + nbIngredient + " " + ingredient;
 
-ingredient = "fhggjhg";
-console.log(ingredient);
+console.log(description);
