@@ -6,12 +6,11 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="bt1">quel age a tu ?</button>
-    <button id="bt2">je m'appelle ?</button>
+    <input id="pr1" type="text" value="votre prenom" />
 
     <script>
-      bt1.onclick = () => alert("29");
-      bt2.onclick = () => alert("philippe");
+      // pr1.ondblclick = () => (pr1.value = "votre age");
+      pr1.onblur = () => (pr1.type = "color");
     </script>
   </body>
 </html>
