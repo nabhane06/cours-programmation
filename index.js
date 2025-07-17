@@ -1,5 +1,9 @@
 let ingredient = "olive";
 const nbIngredient = -6;
-let description = "la pizza contient " + nbIngredient + " " + ingredient;
+let pizzaHasOnion = true;
 
-console.log(description);
+if (!pizzaHasOnion) {
+  console.log("la pizza contient pas d'onions");
+} else {
+  console.log("la pizza est pas bonne");
+}
