@@ -1,11 +1,11 @@
-let monsieurAge = 120;
+let menu = "dessert";
 
-if (monsieurAge >= 130) {
-  console.log("il est mort");
-} else if (monsieurAge >= 20) {
-  console.log("c'est un adulte");
-} else if (monsieurAge >= 4) {
-  console.log("c'est un enfant");
+if (menu === "dessert") {
+  console.log("gateau au chocolat");
+} else if (menu === "hors-d'oeuvre") {
+  console.log("tomate mozza");
+} else if (menu === "plat principal") {
+  console.log("gratin dauphinois");
 } else {
-  console.log("c'est un bebe");
+  console.log("quiche");
 }
