@@ -1,9 +1,11 @@
-let ingredient = "olive";
-const nbIngredient = -6;
-let pizzaHasOnion = true;
+let monsieurAge = 120;
 
-if (!pizzaHasOnion) {
-  console.log("la pizza contient pas d'onions");
+if (monsieurAge >= 130) {
+  console.log("il est mort");
+} else if (monsieurAge >= 20) {
+  console.log("c'est un adulte");
+} else if (monsieurAge >= 4) {
+  console.log("c'est un enfant");
 } else {
-  console.log("la pizza est pas bonne");
+  console.log("c'est un bebe");
 }
