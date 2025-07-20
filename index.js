@@ -1,25 +1,9 @@
-let menu = "hors-d'oeuvre";
+const friends = ["coco", "jaco", "pedro"];
+let count = 0;
 
-// if (menu === "dessert") {
-//   console.log("gateau au chocolat");
-// } else if (menu === "hors-d'oeuvre") {
-//   console.log("tomate mozza");
-// } else if (menu === "plat principal") {
-//   console.log("gratin dauphinois");
-// } else {
-//   console.log("quiche");
-// }
-
-switch (menu) {
-  case "dessert":
-    console.log("gateau au chocolat");
-    break;
-  case "hors-d'oeuvre":
-    console.log("tomate mozza");
-    break;
-  case "plat principal":
-    console.log("gratin dauphinois");
-    break;
-  default:
-    console.log("quiche");
+while (count < friends.length) {
+  console.log(friends[count]);
+  count = count + 1;
 }
+
+console.log("fin");
