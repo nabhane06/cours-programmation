@@ -1,0 +1,5 @@
+variables :
+    - let et const (pas vu var, mot cle historique)
+    - structure de donnees : tableau ([].length)
+conditions : if/else if/else, switch case
+boucles : while, do while, for
