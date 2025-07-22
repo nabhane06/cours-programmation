@@ -1,9 +1,9 @@
-function add() {
+function add(nb1, nb2) {
   console.log("fonction d'addition");
-  console.log(2 + 3);
+  console.log(nb1 + nb2 + nb1);
   console.log("fin");
 }
 
-add();
-add();
-add();
+add(10, 5);
+add(3, 9);
+add(-6, 8.5);
