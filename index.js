@@ -1,11 +1,26 @@
-function add(nb1, nb2) {
-  console.log("fonction d'addition");
-  console.log(nb1 + nb2 + nb1);
-  console.log("fin");
-  return nb1 + nb2 + nb1;
+function calculatrice(nb1, nb2, op) {
+  switch (op) {
+    case "+":
+      console.log("addition");
+      console.log(nb1 + nb2);
+      break;
+    case "-":
+      console.log("soustraction");
+      console.log(nb1 - nb2);
+      break;
+    case "/":
+      console.log("division");
+      console.log(nb1 / nb2);
+      break;
+    case "*":
+      console.log("multiplication");
+      console.log(nb1 * nb2);
+      break;
+
+    default:
+      console.log("+ - / *");
+  }
 }
 
-const result = add(10, 5);
-add(3, 9);
-add(-6, 8.5);
-console.log("retour du 1er appel => " + result);
+calculatrice(45, 4, "*");
+calculatrice(5, 4, "/");
