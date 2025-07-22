@@ -1,15 +1,18 @@
-const friends = ["coco", "jaco"];
+const coco = {
+  name: "Coco",
+  age: 29,
+  email: "coco@gmail.fr",
+};
 
-for (let i = 0; i < friends.length; i = i + 1) {
-  console.log(friends[i]);
-}
+console.log(coco["name"]); // Coco
+console.log(coco["age"]); // 29
 
-for (let friend of friends) {
-  console.log(friend);
-}
+const imprimante = {
+  name: "epson",
+  couleur: "noir",
+  forme: "carré",
+};
 
-for (let index in friends) {
-  console.log(index);
-}
-
-console.log("fin");
+console.log(imprimante["name"]);
+console.log(imprimante["couleur"]);
+console.log(imprimante["forme"]);
