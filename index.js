@@ -1,12 +1,50 @@
-const numbers = [78, 5, -2, 1000, 76, 2, 1, -76, 8887776, 56];
+const users = [
+  {
+    id: 1,
+    name: "Coco",
+    email: "coco@mail.fr",
+    role: "ADMIN",
+  },
+  {
+    id: 2,
+    name: "Jaco",
+    email: "jaco@mail.fr",
+    role: "EDITOR",
+  },
+  {
+    id: 3,
+    name: "Pedro",
+    email: "pedro@mail.fr",
+    role: "SUPER_ADMIN",
+  },
+  {
+    id: 4,
+    name: "Franco",
+    email: "franco@mail.fr",
+    role: "ADMIN",
+  },
+  {
+    id: 5,
+    name: "Fernando",
+    email: "fernando@mail.fr",
+    role: "SUPER_ADMIN",
+  },
+];
 
-const result = numbers.findIndex(display);
-console.log("Result -->", result); // Result --> 2
+// CONSIGNE :
+// extraire tous les supers admins --> [].filter()
+//
 
-// Déclarations de fonctions
-function display(nb, index) {
-  console.log("Valeur:", nb);
-  console.log("Position:", index);
+const usersFiltered = users.filter(getRole);
 
-  return nb <= 4;
+for (let user of usersFiltered) {
+  display(user.name, user.email);
+}
+
+function getRole(user) {
+  return user.role === "SUPER_ADMIN";
+}
+
+function display(userName, userEmail) {
+  console.log("name:", userName, "(" + userEmail + ")");
 }
