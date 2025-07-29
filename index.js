@@ -1,7 +1,12 @@
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [78, 5, -2, 88, 8888, 109, -67.87, 777];
 
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
+numbers.forEach(display);
+// numbers.forEach(console.log);
+
+// Déclarations de fonctions
+function display(nb, index, copyArray) {
+  console.log("Valeur:", nb);
+  console.log("Position:", index);
+  console.log("Copie du tab:", copyArray);
+  console.log();
 }
-
-console.log("Programme terminé");
