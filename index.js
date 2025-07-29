@@ -2,25 +2,26 @@ function calculatrice(nb1, nb2, op) {
   switch (op) {
     case "+":
       console.log("addition");
-      console.log(nb1 + nb2);
-      break;
+      return nb1 + nb2;
+
     case "-":
       console.log("soustraction");
-      console.log(nb1 - nb2);
-      break;
+      return nb1 - nb2;
+
     case "/":
       console.log("division");
-      console.log(nb1 / nb2);
-      break;
+      return nb1 / nb2;
+
     case "*":
       console.log("multiplication");
-      console.log(nb1 * nb2);
-      break;
+      return nb1 * nb2;
 
     default:
       console.log("+ - / *");
   }
 }
 
-calculatrice(45, 4, "*");
+const result = calculatrice(45, 4, "-"); // recuperer une valeur  dans une variable
+console.log(result);
+
 calculatrice(5, 4, "/");
