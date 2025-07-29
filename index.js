@@ -32,8 +32,9 @@ const users = [
 ];
 
 // CONSIGNE :
-// extraire tous les supers admins --> [].filter()
-//
+// extraire tous les rôles désirés --> [].filter()
+// programme configurable depuis le terminal (variable d'environnement)
+// Exemple: ROLE=ADMIN node . OU ROLE=EDITOR node .
 
 const usersFiltered = users.filter(getRole);
 
@@ -42,7 +43,7 @@ for (let user of usersFiltered) {
 }
 
 function getRole(user) {
-  return user.role === "SUPER_ADMIN";
+  return user.role === process.env.ROLE;
 }
 
 function display(userName, userEmail) {
