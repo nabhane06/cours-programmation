@@ -1,12 +1,12 @@
-const numbers = [78, 5, -2, 88, 8888, 109, -67.87, 777];
+const numbers = [78, 5, -2];
 
-numbers.forEach(display);
-// numbers.forEach(console.log);
+const result = numbers.map(display);
+console.log("Result -->", result); // Result --> [156, 10, -4]
 
 // Déclarations de fonctions
-function display(nb, index, copyArray) {
+function display(nb, index) {
   console.log("Valeur:", nb);
   console.log("Position:", index);
-  console.log("Copie du tab:", copyArray);
-  console.log();
+
+  return nb * 2;
 }
