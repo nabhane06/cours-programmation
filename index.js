@@ -1,27 +1,7 @@
-function calculatrice(nb1, nb2, op) {
-  switch (op) {
-    case "+":
-      console.log("addition");
-      return nb1 + nb2;
+const numbers = [1, 2, 3, 4, 5];
 
-    case "-":
-      console.log("soustraction");
-      return nb1 - nb2;
-
-    case "/":
-      console.log("division");
-      return nb1 / nb2;
-
-    case "*":
-      console.log("multiplication");
-      return nb1 * nb2;
-
-    default:
-      console.log("+ - / *");
-  }
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
 }
 
-const result = calculatrice(45, 4, "-"); // recuperer une valeur  dans une variable
-console.log(result);
-
-calculatrice(5, 4, "/");
+console.log("Programme terminé");
