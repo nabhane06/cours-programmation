@@ -1,31 +1,41 @@
-// Dev 1 (celui qui crée l'objet car...)
-const car = {
-  name: "porshe",
-  model: "macane",
-  year: "2025",
-  finition: "sports",
+const beverageMachine = {
+  name: "cocodrink",
+  model: "coca",
+  utilisation: "give a drink",
+  drinks: ["cocaCola", "fanta", "orangina", "bouteille d'eau"],
+
   started: false,
   start: function () {
     if (!this.started) {
       this.started = true;
-      console.log("la voiture démarre et se met à rouler");
+      console.log("mettre 1$");
     } else {
-      console.log("Attention: la voiture est déjà en train de rouler");
+      console.log("appuyer sur n'importe quel boutton");
     }
   },
-  accelerate: () => "la voiture accelere",
+  chooseDrink: function (code) {
+    if (code < this.drinks.length && code >= 0) {
+      console.log("voici votre boisson : " + this.drinks[code]);
+    } else {
+      console.log(
+        "rentrez un code compris entre 0 et " + (+this.drinks.length - 1)
+      );
+    }
+  },
+  inside: function () {
+    console.log("la machine prend la boisson");
+  },
   stop: function () {
     if (this.started) {
       this.started = false;
-      console.log("la voiture s'arrete");
+      console.log("la boisson descend");
     } else {
-      console.log("Attention: la voiture est deja arretée");
+      console.log("la boisson est tomber");
     }
   },
 };
 
-// Dev 2 (celui qui utilise l'objet car)
-car.start();
-car.accelerate();
-car.start();
-car.stop();
+beverageMachine.start();
+beverageMachine.inside();
+beverageMachine.chooseDrink(-9);
+beverageMachine.stop();
