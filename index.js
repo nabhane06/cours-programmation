@@ -2,16 +2,7 @@ const TILE = " . ";
 const SIZE = 5;
 const grid = [];
 
-// Il faut créer :
-// const grid = [
-//   [TILE, TILE, TILE, TILE, TILE], // 0
-//   [TILE, TILE, TILE, TILE, TILE], // 1
-//   [TILE, TILE, TILE, TILE, TILE], // 2
-//   [TILE, TILE, TILE, TILE, TILE], // 3
-//   [TILE, TILE, TILE, TILE, TILE], // 4
-// ]
-
-constcreateGrid();
+createGrid();
 displayGrid();
 
 function createGrid() {
@@ -20,11 +11,13 @@ function createGrid() {
 
     // Création d'une ligne
     for (let j = 0; j < SIZE; j++) {
-      grid[j].push(TILE);
+      grid[i].push(TILE);
     }
   }
 }
 
 function displayGrid() {
-  console.log(map);
+  for (let row of grid) {
+    console.log(row.join(""));
+  }
 }
