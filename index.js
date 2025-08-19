@@ -1,12 +1,20 @@
-const ingredients = ["carrot", "melon", "pamplemousse"];
+const TILE = " . ";
+const SIZE = 5;
 
-for (let i = 0; i < 3; i++) {
-  console.log(ingredients[i]);
+const grid = [];
+let map = "";
+
+// CREER UNE MAP CARREE
+// 1/ Créer une première ligne de tuiles en fonction d'une taille donnée
+// 2/ Après chaque ligne de tuiles, il faut sauter une ligne (\n)
+
+for (let i = 0; i < SIZE; i++) {
+  // Création d'une ligne
+  for (let i = 0; i < SIZE; i++) {
+    map += TILE;
+  }
+  // Ajout d'un saut de ligne
+  map += "\n";
 }
 
-const points = [
-  [8, 2], // 0
-  [3, 5], // 1
-];
-
-console.log(points[1][1]);
+console.log(map);
