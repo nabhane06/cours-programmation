@@ -2,22 +2,27 @@ const TILE = " . ";
 const SIZE = 5;
 const grid = [];
 
-const map = createGrid();
+// Il faut créer :
+// const grid = [
+//   [TILE, TILE, TILE, TILE, TILE], // 0
+//   [TILE, TILE, TILE, TILE, TILE], // 1
+//   [TILE, TILE, TILE, TILE, TILE], // 2
+//   [TILE, TILE, TILE, TILE, TILE], // 3
+//   [TILE, TILE, TILE, TILE, TILE], // 4
+// ]
+
+constcreateGrid();
 displayGrid();
 
 function createGrid() {
-  let map = "";
-
   for (let i = 0; i < SIZE; i++) {
-    // Création d'une ligne
-    for (let i = 0; i < SIZE; i++) {
-      map += TILE;
-    }
-    // Ajout d'un saut de ligne
-    map += "\n";
-  }
+    grid.push([]);
 
-  return map;
+    // Création d'une ligne
+    for (let j = 0; j < SIZE; j++) {
+      grid[j].push(TILE);
+    }
+  }
 }
 
 function displayGrid() {
