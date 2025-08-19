@@ -8,12 +8,8 @@ const TILE = {
 const SIZE = 5;
 const grid = [];
 
-// Si random est inférieur à 0.1 --> Tuile enemie
-// Si random est inférieur à 0.2 --> Tuile trésor
-// Si random est inférieur à 0.3 --> Tuile piège
-// Dans tous les autres cas --> Tuile vide
-
 createGrid();
+placePlayer();
 displayGrid();
 
 function createGrid() {
@@ -34,6 +30,10 @@ function createGrid() {
       }
     }
   }
+}
+
+function placePlayer() {
+  grid[2][2] = TILE.PLAYER;
 }
 
 function displayGrid() {
