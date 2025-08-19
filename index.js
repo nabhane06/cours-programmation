@@ -1,18 +1,12 @@
-const TILE = ".";
+const ingredients = ["carrot", "melon", "pamplemousse"];
 
-const grid = [
-  [TILE, TILE, TILE], // 0 length --> 3
-  [TILE, TILE, TILE], // 1 length --> 3
-  [TILE, TILE, TILE], // 2 length --> 3
-]; // length --> 3
-
-let str = "";
-
-for (let i = 0; i < grid.length; i++) {
-  for (let j = 0; j < grid[i].length; j++) {
-    str += TILE;
-  }
-  str += "\n";
+for (let i = 0; i < 3; i++) {
+  console.log(ingredients[i]);
 }
 
-console.log(str);
+const points = [
+  [8, 2], // 0
+  [3, 5], // 1
+];
+
+console.log(points[1][1]);
