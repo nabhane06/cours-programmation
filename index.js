@@ -1,4 +1,10 @@
-const TILE = " . ";
+const TILE = {
+  EMPTY: " . ",
+  PLAYER: " P ",
+  ENEMY: " E ",
+  TREASURE: " $ ",
+  TRAP: " X ",
+};
 const SIZE = 5;
 const grid = [];
 
@@ -11,7 +17,7 @@ function createGrid() {
 
     // Création d'une ligne
     for (let j = 0; j < SIZE; j++) {
-      grid[i].push(TILE);
+      grid[i].push(TILE.EMPTY);
     }
   }
 }
