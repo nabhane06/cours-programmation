@@ -1,9 +1,9 @@
 const TILE = " . ";
 const SIZE = 5;
-
 const grid = [];
 
-createGrid();
+const map = createGrid();
+displayGrid();
 
 function createGrid() {
   let map = "";
@@ -17,6 +17,9 @@ function createGrid() {
     map += "\n";
   }
 
-  // Affichage de la map
+  return map;
+}
+
+function displayGrid() {
   console.log(map);
 }
