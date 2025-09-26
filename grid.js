@@ -20,6 +20,7 @@ function createGrid(size = 5) {
       }
     }
   }
+  return grid;
 }
 
 function placePlayer() {

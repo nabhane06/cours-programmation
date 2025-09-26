@@ -1,12 +1,15 @@
+const readline = require("readline");
 const grid = require("./grid");
 const player = require("./player");
 
+let map;
 startGame();
 
 function startGame() {
-  grid.createGrid();
+  map = grid.createGrid();
   grid.placePlayer();
   displayGame();
+  listenToInput();
 }
 
 function displayGame() {
@@ -16,4 +19,44 @@ function displayGame() {
   console.log("PV: " + player.hp + " - Score: " + player.score);
   console.log("----------------------");
   console.log("(W A S D pour se deplacer)");
+}
+
+function movePlayer(direction) {
+  if (direction === "w" && player.y > 0) {
+    player.y--;
+  }
+  if (direction === "s" && player.y < map.length - 1) {
+    player.y++;
+  }
+
+  if (direction === "a" && player.x > 0) {
+    player.x--;
+  }
+  if (direction === "d" && player.x < map[0].length - 1) {
+    player.x++;
+  }
+
+  grid.placePlayer();
+}
+
+function listenToInput() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  rl.prompt();
+
+  rl.on("line", function (input) {
+    const key = input.trim().toLowerCase();
+
+    if ("wasd".includes(key)) {
+      movePlayer(key);
+      displayGame();
+    } else {
+      console.log("Attention : il faut utiliser W A S D pour te déplacer !");
+    }
+
+    rl.prompt();
+  });
 }
