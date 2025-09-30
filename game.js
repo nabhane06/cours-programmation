@@ -7,7 +7,7 @@ let map;
 startGame();
 
 function startGame() {
-  map = grid.createGrid();
+  map = grid.createGrid(process.env.SIZE);
   grid.placePlayer();
   displayGame();
   listenToInput();
