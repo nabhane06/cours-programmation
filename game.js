@@ -39,7 +39,21 @@ function movePlayer(direction) {
     player.x++;
   }
 
+  const tile = map[player.y][player.x];
+  applyTileEffect(tile);
+
   grid.placePlayer();
+}
+
+function applyTileEffect(tile) {
+  switch (tile) {
+    case TILE.ENEMY:
+    case TILE.TRAP:
+      player.hp--;
+      break;
+    case TILE.TREASURE:
+      player.score++;
+  }
 }
 
 function listenToInput() {
