@@ -70,6 +70,11 @@ function listenToInput() {
     if ("wasd".includes(key)) {
       movePlayer(key);
       displayGame();
+      if (player.hp <= 0) {
+        console.log("fin du jeux tu es mort");
+        rl.close();
+        process.exit();
+      }
     } else {
       console.log("Attention : il faut utiliser W A S D pour te déplacer !");
     }
