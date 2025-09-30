@@ -1,6 +1,7 @@
 const readline = require("readline");
 const grid = require("./grid");
 const player = require("./player");
+const TILE = require("./tile");
 
 let map;
 startGame();
@@ -22,6 +23,8 @@ function displayGame() {
 }
 
 function movePlayer(direction) {
+  map[player.y][player.x] = TILE.EMPTY;
+
   if (direction === "w" && player.y > 0) {
     player.y--;
   }
