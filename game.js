@@ -82,3 +82,5 @@ function listenToInput() {
     rl.prompt();
   });
 }
+
+module.exports = startGame;
